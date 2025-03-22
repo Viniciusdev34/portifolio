@@ -1,0 +1,266 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "montserrat",Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --text-menuMobile:18px;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.header{
+    width: 100%;
+    display: flex;
+    height: 8vh;
+    background-color: #0d111b;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.header .logo-content a{
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    font-weight: 800;
+}
+.header .navBar .menuBar{
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3em;
+    padding: 1.2em 3em;
+    left: 0;
+    top: 8vh;
+    background-color: #0d111bc7;
+    backdrop-filter: blur(2px);
+    z-index: 1;
+    list-style: none;
+    transition: all 0.5s ease-in-out;
+}
+.header .navBar .menuBar.opemMenu{
+    width: 100%;
+    overflow: initial;
+    opacity: 1;
+}
+.header .navBar .menuBar li a{
+    text-decoration: none;
+    font-size: var(--text-menuMobile);
+    font-weight: 600;
+}
+.header .buttons .hamMenu{
+    padding: 8px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.164);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: rgba(0, 0, 255, 0.096);
+    backdrop-filter: blur(10);
+}
+.header .buttons .hamMenu span{
+    width: 30px;
+    height: 4px;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+}
+.header .buttons .desktop{
+    display: none;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+}
+.main .heroBanner{
+    width: 100%;
+    height: 100vh;
+    background: url("fictional-planet-with-colourful-night-sky-stars-nebula.jpg");
+    background-size: cover;
+    background-position: bottom center;
+}
+.main .heroBanner .gridBanner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+.main .heroBanner .gridBanner .textContent{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+.main .heroBanner .gridBanner .textContent h1{
+    font-size: clamp(42px,8vw,60px);
+    color: white;
+    font-weight: 900;
+    text-align: center;
+}
+.main .heroBanner .gridBanner .textContent h2{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 1.4em;
+}
+.main .heroBanner .gridBanner .textContent .buttonsBuys{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.main .heroBanner .gridBanner .textContent .buttonsBuys .buyBlue{
+    padding: .90em 1.4em;
+    background-color: rgba(0, 35, 112, 0.651);
+    backdrop-filter: blur(3px);
+    border-radius: 20px;
+    border: 1px solid white;
+}
+.main .heroBanner .gridBanner .textContent .buttonsBuys .buyBlue a{
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.main .heroBanner .gridBanner .textContent .buttonsBuys .learnMore{
+    padding: 1.2em 1.2em;
+    background-color: rgba(0, 35, 112, 0);
+    backdrop-filter: blur(4px);
+    border-radius: 20px;
+    border: 1px solid white;
+}
+.main .heroBanner .gridBanner .textContent .buttonsBuys .learnMore a{
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.main .outCard{
+    width: 100%;
+    height: auto;
+    background-color: #0d111b;
+}
+.main .outCard .gridContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    align-items: center;
+    justify-content: center;
+    margin: 0 40px;
+}
+.main .outCard .gridOut h2{
+    padding: 1.5em 2.4em;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.main .outCard .gridContainer .card{
+    background-color: #15181fd8;
+    border-radius: 16px;
+    padding: 10px 20px;
+    text-align: center;
+    margin: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.452);
+    /* width: 400px; */
+}
+.main .outCard .gridContainer .card img{
+    max-width: 200px;
+}
+.main .outCard .gridContainer .card img img{ 
+    width: 100%;
+}
+.main .outCard .gridContainer .card .TextContent{
+    padding: 0 20px;
+}
+.main .outCard .gridContainer .card .TextContent h2{
+    font-size: 24px;
+    color: white;
+}
+.main .outCard .gridContainer .card .TextContent p{
+    font-size: 14px;
+    color: white;
+}
+
+.main .resultados-grid{
+    width: 100%;
+    text-align: center;
+}
+.main .resultados-grid .gridContent{
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+}
+.main .resultados-grid .gridContent .contentImg{
+    min-width: 400px;
+}
+.main .resultados-grid .gridContent .contentImg img{
+    width: 80%;
+    margin: 0 auto;
+}
+.main .resultados-grid .gridContent .cardCondend{
+    padding: 10px 20px;
+    text-align: center;
+    margin: 20px 30px;
+}
+.main .resultados-grid .gridContent .cardCondend .textCondend {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+.main .resultados-grid .gridContent .cardCondend .textCondend h2{
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.main .resultados-grid .gridContent .cardCondend .textCondend p{
+    font-size: 15px;
+    font-weight: 300;
+}
+.main .resultados-grid .gridContent .cardCondend .cardButtonsClo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+.main .resultados-grid .gridContent .cardCondend .cardButtonsClo .cardPurply{
+   background-color: rgb(136, 25, 163);
+   padding: 10px 20px;
+   border: 2.5px solid rgba(245, 245, 245, 0.671);
+   width: 60%;
+}
+.main .resultados-grid .gridContent .cardCondend .cardButtonsClo .cardPurply.blue{
+   background-color: rgba(4, 38, 100, 0.959);
+   padding: 10px 20px;
+   border: 2.5px solid rgba(245, 245, 245, 0.671);
+   width: 60%;
+}
+.main .resultados-grid .gridContent .cardCondend .cardButtonsClo .cardPurply h2{
+   color:white;
+   font-size: 42px;
+   font-weight: 800;
+}
+.main .resultados-grid .gridContent .cardCondend .cardButtonsClo .cardPurply p{
+   color:white;
+   font-size: 15px;
+   font-weight: 300;
+}
