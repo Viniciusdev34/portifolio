@@ -155,7 +155,7 @@ aside ul li a:hover span{
     background-size: cover;
     background-position: bottom center;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(1fr, 300px));
     gap: 10px;
     padding: 10px;
     background-attachment: fixed;
@@ -177,6 +177,7 @@ aside ul li a:hover span{
     text-transform: uppercase;
     font-weight: 800;
     color: white;
+    font-size: clamp(1.5em, 1.5em + 1vw, 2em);
 }
 .home .card.UX{
     display: flex;
@@ -189,71 +190,128 @@ aside ul li a:hover span{
     text-transform: uppercase;
     font-weight: 800;
     color: white;
+    font-size: clamp(1.5em, 1.5em + 1vw, 2em);
 }
 .home .card.span2{
     grid-column: span 2;
     grid-row: span 4;
     background-color: #2c2929c0;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .home .card.span2 h2{
     display: flex;
-    font-size: 4em;
-    align-items: center;
+    font-size: clamp(1.5em, 1.5em + 1vw, 2em);
     text-transform: uppercase;
     font-weight: 800;
     color: white;
-    justify-content: center;
-    text-align: center;
 }
 .home .card.row2{
     display: flex;
     background-color: #2b4ca7af;
+    grid-column: span 2;
+    align-items: center;
+    justify-content: center;
 }
 .home .card.row2 h2{
     display: flex;
-    font-size: 4em;
-    align-items: center;
     text-transform: uppercase;
     font-weight: 800;
     color: white;
-    justify-content: center;
-    text-align: center;
+    font-size: clamp(1.5em, 1.5em + 1vw, 2em);
 }
 .home .card.row2{
     grid-row: span 4;
 }
 .home .card.frent{
     display: flex;
-    align-self: center;
+    align-items: center;
     gap: 20px;
     padding: 10px 15px;
-    background-color: #fff;
+    background-color: #ffffff67;
     position: relative;
+    grid-column: span 2;
+    justify-content: center;
+    border: 1px solid #fff;
 }
 .home .card.frent i{
+    display: flex;
+    align-items: center;
     font-size: 1.2em;
     font-weight: 800;
     color: #ffffff;
     background-color: #630466;
-    padding: 10px;
     position: absolute;
+    padding: .80em;
     left: 0;
     top: 0;
+    bottom: 0;
     border-radius: 8px;
 }
 .home .card.frent p{
     font-size: 1em;
     font-weight: 300;
-    color: #2c2929;
-    margin-left: 15%;
+    color: #630466;
+    font-weight: 600;
+    margin-left: 10%;
+}
+.home .card.span3{
+    grid-column: span 2;
+    background-color: #ffffff67;
+    display: flex;
+    justify-items: center;
 }
 .about{
     width: 100%;
     min-height: 100vh;
-    background-color: #367be4;
+    background-color: #1b1c1d;
+    display: flex;
+    flex-direction: column;
+    padding: 3em 0;
+
+}
+.about .flexContainer{
+    grid-template-columns: repeat(auto-fill, minmax(1fr, 300px));
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.about .flexContainer .card{
+    background-color: #101011;
+    border-radius: 10px;
+    height: 100px;
+    padding: 10px;
+    margin: 10px 0;
     display: flex;
     align-items: center;
     justify-content: center;
-
+}
+.about .flexContainer .card h2{
+    color: rgb(175, 8, 139);
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.about .imgContainer{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.4em;
+}
+.about img{
+    width: 80%;
+}
+.about h1{
+    font-size: clamp(1.4em , 2em + 1vw, 3em);
+    color: white;
+    padding: 0 20px;
+    text-transform: capitalize;
+}
+.about p{
+    font-size: clamp(.70em, .80em + 1vw, .90em);
+    color: white;
+    padding: 0 20px;
+    margin: 20px 0;
 }
